@@ -41,7 +41,11 @@ class NewlineForMultilineKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(3, 5, "Expected newline before 'else'")
+      .hasLintViolation(
+        line = 3,
+        col = 5,
+        detail = "Expected newline before 'else'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -79,7 +83,11 @@ class NewlineForMultilineKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(3, 5, "Expected newline before 'else'")
+      .hasLintViolation(
+        line = 3,
+        col = 5,
+        detail = "Expected newline before 'else'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -117,7 +125,11 @@ class NewlineForMultilineKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(3, 5, "Expected newline before 'catch'")
+      .hasLintViolation(
+        line = 3,
+        col = 5,
+        detail = "Expected newline before 'catch'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -155,7 +167,11 @@ class NewlineForMultilineKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(3, 5, "Expected newline before 'finally'")
+      .hasLintViolation(
+        line = 3,
+        col = 5,
+        detail = "Expected newline before 'finally'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -199,8 +215,16 @@ class NewlineForMultilineKeywordTest {
     """.trimIndent()
     wrappedRule(code)
       .hasLintViolations(
-        LintViolation(3, 5, "Expected newline before 'catch'"),
-        LintViolation(4, 5, "Expected newline before 'finally'"),
+        LintViolation(
+          line = 3,
+          col = 5,
+          detail = "Expected newline before 'catch'",
+        ),
+        LintViolation(
+          line = 4,
+          col = 5,
+          detail = "Expected newline before 'finally'",
+        ),
       )
       .isFormattedAs(expected)
   }

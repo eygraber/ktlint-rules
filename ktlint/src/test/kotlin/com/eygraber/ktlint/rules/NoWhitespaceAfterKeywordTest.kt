@@ -1,7 +1,6 @@
 package com.eygraber.ktlint.rules
 
 import com.pinterest.ktlint.test.KtLintAssertThat.Companion.assertThatRule
-import com.pinterest.ktlint.test.LintViolation
 import org.junit.Test
 
 class NoWhitespaceAfterKeywordTest {
@@ -33,7 +32,11 @@ class NoWhitespaceAfterKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(2, 3, "Unexpected whitespace after 'if'")
+      .hasLintViolation(
+        line = 2,
+        col = 3,
+        detail = "Unexpected whitespace after 'if'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -50,7 +53,11 @@ class NoWhitespaceAfterKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(2, 3, "Unexpected whitespace after 'if'")
+      .hasLintViolation(
+        line = 2,
+        col = 3,
+        detail = "Unexpected whitespace after 'if'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -86,7 +93,11 @@ class NoWhitespaceAfterKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(2, 3, "Unexpected whitespace after 'when'")
+      .hasLintViolation(
+        line = 2,
+        col = 3,
+        detail = "Unexpected whitespace after 'when'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -129,7 +140,11 @@ class NoWhitespaceAfterKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(2, 3, "Unexpected whitespace after 'for'")
+      .hasLintViolation(
+        line = 2,
+        col = 3,
+        detail = "Unexpected whitespace after 'for'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -159,7 +174,11 @@ class NoWhitespaceAfterKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(2, 3, "Unexpected whitespace after 'while'")
+      .hasLintViolation(
+        line = 2,
+        col = 3,
+        detail = "Unexpected whitespace after 'while'",
+      )
       .isFormattedAs(expected)
   }
 
@@ -189,7 +208,11 @@ class NoWhitespaceAfterKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(2, 9, "Unexpected whitespace after 'while' in do-while")
+      .hasLintViolation(
+        line = 2,
+        col = 9,
+        detail = "Unexpected whitespace after 'while' in do-while",
+      )
       .isFormattedAs(expected)
   }
 
@@ -219,7 +242,11 @@ class NoWhitespaceAfterKeywordTest {
     }
     """.trimIndent()
     wrappedRule(code)
-      .hasLintViolation(2, 10, "Unexpected whitespace after 'catch'")
+      .hasLintViolation(
+        line = 2,
+        col = 10,
+        detail = "Unexpected whitespace after 'catch'",
+      )
       .isFormattedAs(expected)
   }
 }

@@ -8,6 +8,7 @@ conventions = "0.0.98"
 kotlin = "2.3.0"
 
 ktlint = "1.8.0"
+ktlintCustomRules = "0.1.1"
 
 publish = "0.36.0"
 
@@ -21,7 +22,12 @@ buildscript-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ver
 buildscript-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "publish" }
 
 # not actually used; just here so renovate picks it up
+# noinspection UnusedVersionCatalogEntry
 ktlint = { module = "com.pinterest.ktlint:ktlint-bom", version.ref = "ktlint" }
+
+# just here so renovate picks it up
+# noinspection UnusedVersionCatalogEntry
+ktlintCustomRules = { module = "com.eygraber.ktlint.rules:ktlint-rules", version.ref = "ktlintCustomRules" }
 
 ktlintRuleEngine = { module = "com.pinterest.ktlint:ktlint-rule-engine-core", version.ref = "ktlint" }
 ktlintCliRulesetCore = { module = "com.pinterest.ktlint:ktlint-cli-ruleset-core", version.ref = "ktlint" }
