@@ -35,4 +35,4 @@ ktlintTest = { module = "com.pinterest.ktlint:ktlint-test", version.ref = "ktlin
 
 test-assertj = "org.assertj:assertj-core:3.27.7"
 test-junit = "junit:junit:4.13.2"
-test-slf4j-noop = "org.slf4j:slf4j-nop:2.0.17"
+test-slf4j-noop = "org.slf4j:slf4j-nop:2.0.18"
